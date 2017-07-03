@@ -1,0 +1,5 @@
+C:\Users\User\Documents\Visual Studio 2015\Projects\CodeWars\CodeWars\bin\Debug\CodeWars.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\CodeWars\CodeWars\bin\Debug\CodeWars.pdb
+C:\Users\User\Documents\Visual Studio 2015\Projects\CodeWars\CodeWars\obj\Debug\CodeWars.csprojResolveAssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2015\Projects\CodeWars\CodeWars\obj\Debug\CodeWars.dll
+C:\Users\User\Documents\Visual Studio 2015\Projects\CodeWars\CodeWars\obj\Debug\CodeWars.pdb
