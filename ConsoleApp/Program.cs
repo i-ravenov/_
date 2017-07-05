@@ -16,13 +16,8 @@ namespace ConsoleApp
             Tree tree = IntPart.ConstructTree(5);
             tree.ShowTree();
 
+            Console.WriteLine(10.GetHashCode());
             
-            Tree[] forest = IntPart.ConstructForest(5);
-            foreach (var tree1 in forest)
-            {
-                tree1.ShowTree();
-            }
-
             Console.ReadKey();
         }
     }
