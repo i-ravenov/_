@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AA5DD802-1F23-4D17-9198-67F57192C69C}</ProjectGuid>
+    <ProjectGuid>{89DCB10F-9808-443A-A6BD-320EE956DADE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>CodeWars</RootNamespace>
