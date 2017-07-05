@@ -1,0 +1,49 @@
+artifacts
+.nuget/nuget.exe
+Data/sdir.txt
+bin/
+obj/
+x64/
+*.sdf
+*.suo
+*.Cache
+/PalletBuildSolutionTest/
+/TestResults/
+FakesAssemblies/
+*.opensdf
+*.nupkg
+packages
+_AssemblyInfo.cs
+*~
+*.bak
+*.user
+buildlog-*.log
+Backup *.*
+_[Aa]rtifacts
+*.nupkg
+*.orig
+
+#vs config
+.vs/*
+
+#Removing Build system -- delivered via nuget
+build.msbuild
+build/common-build.targets
+build/project-common.targets
+build/sre-build.targets
+build/sre-global.targets
+set_versions.cmd
+set_versions.ps1
+show_versions.ps1
+version-post.cmd
+version.cmd
+versions.cmd
+msbuild.cmd
+
+# profiling results
+*.vsp
+
+BoxPackerTester/Results/
+Tools/Regressions/PalletBuild.Regressions/PBPTestMaster.cfg
+Tools/Regressions/PalletBuild.Regressions/PBPTestConfig.cfg
+/*.DotSettings
