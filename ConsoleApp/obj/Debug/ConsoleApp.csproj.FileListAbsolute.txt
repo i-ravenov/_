@@ -1,8 +1,0 @@
-C:\Users\User\Documents\Visual Studio 2015\Projects\CodeWars\ConsoleApp\bin\Debug\ConsoleApp.exe.config
-C:\Users\User\Documents\Visual Studio 2015\Projects\CodeWars\ConsoleApp\bin\Debug\ConsoleApp.exe
-C:\Users\User\Documents\Visual Studio 2015\Projects\CodeWars\ConsoleApp\bin\Debug\ConsoleApp.pdb
-C:\Users\User\Documents\Visual Studio 2015\Projects\CodeWars\ConsoleApp\bin\Debug\CodeWars.dll
-C:\Users\User\Documents\Visual Studio 2015\Projects\CodeWars\ConsoleApp\bin\Debug\CodeWars.pdb
-C:\Users\User\Documents\Visual Studio 2015\Projects\CodeWars\ConsoleApp\obj\Debug\ConsoleApp.csprojResolveAssemblyReference.cache
-C:\Users\User\Documents\Visual Studio 2015\Projects\CodeWars\ConsoleApp\obj\Debug\ConsoleApp.exe
-C:\Users\User\Documents\Visual Studio 2015\Projects\CodeWars\ConsoleApp\obj\Debug\ConsoleApp.pdb
