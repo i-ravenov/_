@@ -4,42 +4,47 @@ using System.Linq;
 
 namespace CodeWars
 {
-    public class PartDictionary
+    public class Partition
     {
-        public class Partition
+        private int[] _partition;
+
+        public Partition(int a)
         {
-            private int[] _partition;
-
-            public Partition(int a)
-            {
-                _partition = new[] {a};
-            }
-
-            public override bool Equals(object obj)
-            {
-                Partition that = obj as Partition;
-                int length = _partition.Length;
-                if (length != that._partition.Length)
-                    return false;
-                
-                Array.Sort(this._partition);
-                Array.Sort(that._partition);
-                for (int i = 0; i < length; i++)
-                {
-                    if (_partition[i] != that._partition[i])
-                    {
-                        return false;
-                    } 
-                }
-                return true;
-            }
-
-            public override int GetHashCode()
-            {
-                return _partition.Sum();
-            }
+            _partition = new[] { a };
         }
 
+        public Partition(int[] parts)
+        {
+            _partition = parts;
+        }
+
+        public override bool Equals(object obj)
+        {
+            Partition that = obj as Partition;
+            int length = _partition.Length;
+            if (length != that._partition.Length)
+                return false;
+
+            Array.Sort(this._partition);
+            Array.Sort(that._partition);
+            for (int i = 0; i < length; i++)
+            {
+                if (_partition[i] != that._partition[i])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public override int GetHashCode()
+        {
+            return _partition.Sum();
+        }
+    }
+
+    public class PartDictionary
+    {
         private IDictionary<int, ISet<Partition>> _dictionary 
             = new Dictionary<int, ISet<Partition>>();
 
@@ -52,6 +57,9 @@ namespace CodeWars
             }
 
         }
+
+
+
     }
 
 
