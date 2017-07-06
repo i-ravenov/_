@@ -44,15 +44,49 @@ namespace CodeWarsTests
         }
 
         [TestMethod]
-        public void EqualsTest()
+        public void ConcatTwoPartitionsTest()
         {
-            Assert.Fail();
+            // Arrange
+            var first = new Partition(new[] { 1, 1, 1, 3 });
+            var second = new Partition(new[] { 2, 3, 1 });
+
+            // Act
+            var sum = first + second;
+
+            // Assert
+            Assert.IsTrue(sum.Length == 7);
         }
 
         [TestMethod]
-        public void GetHashCodeTest()
+        public void DecartCompositionTest()
         {
-            Assert.Fail();
+            // Arrange
+            var p1 = new Partition(1);
+
+            // Act
+            var composition = Partition.Decart(new HashSet<Partition> {p1}, new HashSet<Partition> { p1 });
+
+            // Assert
+            Assert.IsTrue(composition.Count == 1);
+            Assert.IsTrue(composition.Contains(new Partition(new []{1, 1})));
+        }
+
+        [TestMethod]
+        public void DecartCompositionTest2()
+        {
+            // Arrange 
+            var p1 = new Partition(new[] { 1, 1, 1, 3 });
+            var p2 = new Partition(new[] { 2, 3, 1 });
+            var p3 = new Partition(new[] {2});
+            var p4 = new Partition(new [] {3});
+            var leftSet = new HashSet<Partition> {p1, p2, p3};
+            var rightSet = new HashSet<Partition> {p3, p4};
+
+            // Act
+            var composition = Partition.Decart(leftSet, rightSet);
+
+            // Assert
+            Assert.IsTrue(composition.Count == 6);
         }
     }
 }
