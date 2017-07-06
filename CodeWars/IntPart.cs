@@ -23,6 +23,16 @@ namespace CodeWars
             get { return _partition.Length; }
         }
 
+        public int Composition()
+        {
+            int res = 1;
+            foreach (var i in _partition)
+            {
+                res *= i;
+            }
+            return res;
+        }
+
         public override bool Equals(object obj)
         {
             Partition that = obj as Partition;
@@ -85,16 +95,40 @@ namespace CodeWars
             {
                 if (!_dictionary.Keys.Contains(n))
                 {
-                    throw new Exception($"Partition for {n} haven't been calculated yet");
+                    PopulateUpToN(n);
                 }
                 return _dictionary[n];
             }
+        }
+
+        public static IList<int> Map(ISet<Partition> input)
+        {
+            ISet<int> set = new HashSet<int>();
+            foreach (var p in input)
+            {
+                set.Add(p.Composition());
+            }
+            List<int> res = set.ToList();
+            res.Sort();
+            return res;
+        }
+
+        public static string Reduce(IList<int> input)
+        {
+            int size = input.Count;
+            int range = input.Last() - input.First();
+            float average = input.Sum() / (float)input.Count;
+            float median = input.Count % 2 == 0 ? (input[size / 2] + input[size / 2 - 1]) / 2 : input[size / 2];
+
+            return $"Range: {range} Average: {average:0.00} Median: {median:0.00}";
         }
 
         private void PopulateUpToN(int n)
         {
             for (int i = 1; i <= n; i++)
             {
+                if(_dictionary.ContainsKey(i)) continue;;
+
                 _dictionary[i] = new HashSet<Partition> {new Partition(i)};
                 for (int j = 1; j <= i / 2; j++)
                 {
@@ -107,30 +141,18 @@ namespace CodeWars
 
     public class IntPart
     {
+        private static PartDictionary _dictionary;
 
-        public void Part(long n)
+        static IntPart()
         {
-            Node root = new Node(5);
-
+            _dictionary = new PartDictionary(3);
         }
 
-        public static Tree ConstructTree(int n)
+        public static string Part(long n)
         {
-            Node root = new Node(n);
-            Node node = root;
-            for (int i = 1; i < n; i++)
-            {
-                Node left = new Node(1);
-                Node right = new Node(n-i);
-                node.AddChild(left, right);
-                node = right;
-            }
-            
-            return new Tree(root);
+            int val = (int)n;
+            IList<int> mapped = PartDictionary.Map(_dictionary[val]);
+            return PartDictionary.Reduce(mapped);
         }
-
-
-
-        
     }
 }

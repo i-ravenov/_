@@ -36,5 +36,18 @@ namespace CodeWarsTests
             // Assert
             Assert.IsTrue(parts.Count == 37338);
         }
+
+        [TestMethod]
+        public void PartitionForNotSoLargeValueTest()
+        {
+            // Arrange
+            PartDictionary d = new PartDictionary(10);
+
+            // Act
+            ISet<Partition> parts = d[10];
+
+            // Assert
+            Assert.IsTrue(parts.Count == 42);
+        }
     }
 }
