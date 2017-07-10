@@ -40,10 +40,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IntPart.cs" />
-    <Compile Include="PhoneDirectory.cs" />
+    <Compile Include="DataStructures\Tree.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tree.cs" />
+    <Compile Include="Solutions\IntPart\IntPart.cs" />
+    <Compile Include="Solutions\IntPart\PartDictionary.cs" />
+    <Compile Include="Solutions\IntPart\Partition.cs" />
+    <Compile Include="Solutions\PhoneDirectory\PhoneDirectory.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
