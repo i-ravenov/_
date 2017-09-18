@@ -41,7 +41,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DataStructures\Tree.cs" />
+    <Compile Include="DataStructures\TreeNode.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Solutions\FunWithTrees.cs" />
     <Compile Include="Solutions\IntPart\IntPart.cs" />
     <Compile Include="Solutions\IntPart\PartDictionary.cs" />
     <Compile Include="Solutions\IntPart\Partition.cs" />

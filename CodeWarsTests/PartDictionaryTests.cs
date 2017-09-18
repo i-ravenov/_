@@ -5,6 +5,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CodeWars.DataStructures;
+using CodeWars.Solutions;
 
 namespace CodeWarsTests
 {
@@ -24,18 +26,18 @@ namespace CodeWarsTests
             Assert.IsTrue(parts.Count == 5);
         }
 
-        [TestMethod]
-        public void PartitionForLargeValueTest()
-        {
-            // Arrange
-            PartDictionary d = new PartDictionary(40);
+        //[TestMethod]
+        //public void PartitionForLargeValueTest()
+        //{
+        //    // Arrange
+        //    PartDictionary d = new PartDictionary(40);
 
-            // Act
-            ISet<Partition> parts = d[40];
+        //    // Act
+        //    ISet<Partition> parts = d[40];
 
-            // Assert
-            Assert.IsTrue(parts.Count == 37338);
-        }
+        //    // Assert
+        //    Assert.IsTrue(parts.Count == 37338);
+        //}
 
         [TestMethod]
         public void PartitionForNotSoLargeValueTest()
